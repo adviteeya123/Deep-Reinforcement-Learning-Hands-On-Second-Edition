@@ -1,3 +1,12 @@
+
+'''The overall logic of our code is simple: in the loop, we play 100 random steps from 
+the environment, populating the reward and transition tables. After those 100 
+steps, we perform a value iteration loop over all states, updating our value table. 
+Then we play several full episodes to check our improvements using the updated 
+value table. If the average reward for those test episodes is above the 0.8 boundary, 
+then we stop training. During the test episodes, we also update our reward and 
+transition tables to use all data from the environment.'''
+
 #!/usr/bin/env python3
 import gym
 import collections
